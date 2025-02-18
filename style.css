@@ -20,24 +20,11 @@
 	box-sizing: border-box;
 }
 
-.menu_item{
-    list-style: none;
-}
-
-.menu_link{
-    color: white;
-    text-decoration: none;
-}
-
-.menu_link{
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
 .menu{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
 }
 
 .header_row{
@@ -61,7 +48,31 @@
     flex-grow: 3;
 }
 
+.menu_item{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+}
 
+.menu_link{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu_item::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color:  white;
+    transition: .5s ease-in-out;
+}
+
+.menu_item:hover::after{
+    width: 50%;
+}
 /* Баннер */
 
 .banner_sec{
@@ -73,11 +84,44 @@
 
 .banner_title{
     font-size: 48px;
+    padding-bottom: 40px;
 }
 .banner_title, .banner_description{
     text-align: center;
     color: white;
 }
+.banner_description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner_menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 35px;
+}
+.banner_link{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.banner_menu:first-of-type{
+    padding-left: 0;
+}
+.banner_menu::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color:  white;
+    transition: .5s ease-in-out;
+}
+
+.banner_menu:hover::after{
+    width: 50%;
+}
+
 
 /* Карточки */
 
@@ -111,13 +155,18 @@
     border-radius: 10px;
 }
 
-
 .card_title, .card_text{
     margin-bottom: 10px;
 }
 
 .card_button{
     cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.card_button:hover {
+    background: #1b3764;
+    font-size: 102%;
 }
 
 .cards_row{
@@ -182,4 +231,10 @@
     border-radius: 10px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+.footer_button:hover{
+    color: white;
+    background: transparent;
 }
