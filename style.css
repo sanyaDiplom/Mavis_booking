@@ -4,8 +4,12 @@
     padding: 0;
 }
 
+body {
+    width: 100%;
+}
+
 .container{
-    max-width: 1140px;  
+    max-width: 1290px;  
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -73,6 +77,11 @@
 .menu_item:hover::after{
     width: 50%;
 }
+
+.main{
+    min-height: calc(100vh - 200px);
+}
+
 /* Баннер */
 
 .banner_sec{
@@ -222,7 +231,13 @@
     flex-grow: 3;
     margin-right: 20px;
     border-radius: 10px;
-    border: none;
+    width: 100%;
+	outline: none;
+	margin: 10px 5px;
+	transition: .2s;
+	font-size: 14pt;
+	padding-left: 10px;
+	border: solid 1px black;
 }
 
 .footer_button{
@@ -231,6 +246,10 @@
     border-radius: 10px;
     text-transform: uppercase;
     font-weight: bold;
+    width: 100%;
+	outline: none;
+	margin: 10px 5px;
+	/*font-size: 14pt;*/
     transition: .5s ease-in-out;
 }
 
