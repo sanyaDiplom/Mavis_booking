@@ -4,8 +4,10 @@
 ?>
 <main class="main">
         <section class="auto_setion">
-            <div class="head" id="register">Авторизация</div>
-        
+        <div class="container">
+        <div class = 'reg_row'>
+            <h1 class="cards_title" id="auto">Авторизация</div>
+            <form method="POST" class="auto_form">
           <input class="reg_input"
             type="text" class="auto_input"
             placeholder="Логин"
@@ -19,10 +21,11 @@
             pattern=".{8,}"
             required
           />
-          <button class="auto_button">Войти</button>
+          <button class="reg_button">Войти</button>
         </form>
-
-        </section>
+    </div>
+    </div>
+    </section>
     </main>
 <!--Добавляем подвал-->
 <?php

@@ -72,7 +72,6 @@
 
                     </div>
                     <div class = 'card'>
-<!--Доработать кнопку, что бы срабатывала при наведении на весь блок-->
                         <img class = 'card_img' src="assets/img/grafika.jpg">
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Графика</h3>
