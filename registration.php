@@ -7,7 +7,7 @@
             <div class="container">
                 <div class = 'reg_row'>
                     <h1 class="cards_title" id="register">Регистрация</div>
-                    <form method="POST" class="reg_form">
+                    <form action="vendor/components/register.php" method="POST" class="reg_form">
                         <input class="reg_input"
                             type="text"
                             placeholder="Имя"
