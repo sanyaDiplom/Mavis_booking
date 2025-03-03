@@ -1,13 +1,20 @@
 <!-- Добавляем шапку -->
 <?php
         include('vendor/components/header.php');
+        
 ?>
 <main class="main">
         <section class="reg_setion">
             <div class="container">
                 <div class = 'reg_row'>
-                    <h1 class="cards_title" id="register">Регистрация</div>
+                    <h1 class="cards_title" id="reg" name="reg">Регистрация</div>
                     <form action="vendor/components/register.php" method="POST" class="reg_form">
+                    <?php if(isset($_SESSION['errors'])){
+                            foreach($_SESSION['errors'] as $key=> $value){ ?>
+                            <p class="reg_error"> <?php echo $value; ?></p>    
+                        <?php }
+                        unset($_SESSION['errors']);
+                        }?>
                         <input class="reg_input"
                             type="text"
                             placeholder="Имя"
@@ -18,6 +25,7 @@
                             type="text"
                             placeholder="Отчество"
                             name="patronymic"
+                            required
                         />
                         <input class="reg_input"
                             type="text"
@@ -31,7 +39,12 @@
                         name="login"
                         required
                     />
-                    <input class="reg_input" type="email" placeholder="Email" name="email" required />
+                    <input class="reg_input" 
+                    type="email" 
+                    placeholder="Email" 
+                    name="email" 
+                    required
+                    />
                     <input class="reg_input"
                     type="tel" class="reg_input"
                     placeholder="Номер телефона"
