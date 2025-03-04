@@ -23,12 +23,17 @@
                 <!--Главное меню-->
                 <div class="header_menu">
                     <ul class="menu">
-                        <li class="menu_item"><a href="./index.php" class = 'menu_link'>Вернуться на главную</a></li>
+                        <?php if(isset($_SESSION['users'])){
+                            if($_SESSION['users']['status']=='2') {
+                            //Доступно только администратору, менеджеры не видят
+                        ?>
                         <li class="menu_item"><a href="#" class = 'menu_link'>Управление пользователями</a></li>
+                        <?php }} ?>
                         <li class="menu_item"><a href="#" class = 'menu_link'>Управление проектами</a></li>
+                        <li class="menu_item"><a href="#" class = 'menu_link'>Управление квартирами</a></li>
                         <li class="menu_item"><a href="#" class = 'menu_link'>Управление бронированиями</a></li>
                         <li class="menu_item"><a href="#" class = 'menu_link'>Управление обратной связью</a></li>
-                        <li class="menu_item"><a href="#" class = 'menu_link'>Выйти</a></li>
+                        <li class="menu_item"><a href="./index.php" class = 'menu_link'>Выйти из панели</a></li>
                     </ul>
                 </div>
             </div>

@@ -31,6 +31,44 @@ body {
     align-items: center;
 }
 
+.submenu {
+    background: white;
+    border: 2px solid #003559;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 120px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0% 0%;
+    transition: .6s ease-in-out;
+}
+
+.menu > li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+
+.submenu li a {
+    color: #1b3764;
+    font-size: 13px;
+    line-height: 36px;
+}
+
+.submenu li::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color:  #1b3764;
+    transition: .5s ease-in-out;
+}
+
+.submenu li:hover::after{
+    width: 40%;
+}
+
 .header_row{
     display: flex;
     flex-direction: row;
@@ -52,11 +90,12 @@ body {
     flex-grow: 3;
 }
 
-.menu_item{
+.menu_item, .menu_item_down{
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding-left: 35px;
+    padding-left: 20px;
+    position: relative;
 }
 
 .menu_link{
@@ -78,8 +117,9 @@ body {
     width: 50%;
 }
 
+
 .main{
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 375px);
 }
 
 /* Баннер */
@@ -201,7 +241,7 @@ body {
     justify-content: space-between;
 }
 
-.reg_form, .auto_form {
+.reg_form, .auto_form, .reg_error {
 	width: 60%;
 	margin: 0 auto;
     display: flex;
@@ -211,13 +251,25 @@ body {
     align-items: center;
 }
 
+/*Ошибки при регистрации*/
+.reg_error{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #c0bebe;
+    color: red;
+    font-size: large;
+    align-items: center;
+    border: red solid 1px;
+    border-radius: 10px;
+}
 
 /* Подвал */
 
 .footer{
     background: #1b3764;
     background-size: cover;
-    padding: 100px 0px;
+    padding: 50px 0px;
 }
 
 .form_text, .copyright{
@@ -275,7 +327,7 @@ body {
     width: 100%;
 	outline: none;
 	margin: 10px 5px;
-	font-size: 14pt;
+	/*font-size: 14pt;*/
     transition: .5s ease-in-out;
 }
 
