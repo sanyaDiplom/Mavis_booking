@@ -60,6 +60,12 @@
                             if(isset($_SESSION['regform'])){?>
                                 value=<?php echo $_SESSION['regform']['email'];}?>
                     />
+                    <input class="reg_input" 
+                    type="email" 
+                    placeholder="Email" 
+                    name="email" 
+                    required
+                    />
                     <input class="reg_input"
                     type="text" class="reg_input"
                     placeholder="+7(xxx)xxx-xx-xx"
