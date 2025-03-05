@@ -7,12 +7,19 @@
         <div class="container">
         <div class = 'reg_row'>
             <h1 class="cards_title" id="auto">Авторизация</div>
-            <form method="POST" class="auto_form">
+            <form action="vendor/action/sigin.php" method="POST" class="auto_form">
+            <?php if(isset($_SESSION['massage'])){
+                            foreach($_SESSION['massage'] as $key=> $value){ ?>
+                            <p class="reg_error"> <?php echo $value; ?></p>    
+                        <?php }
+                        unset($_SESSION['massage']);
+                        }
+             ?>
           <input class="reg_input"
             type="text" class="auto_input"
             placeholder="Логин"
             name="login"
-            required
+            required        
           />
           <input class="reg_input"
             type="password"
@@ -21,6 +28,7 @@
             pattern=".{8,}"
             required
           />
+          <?php unset($_SESSION['autoform']); ?>
           <button class="reg_button">Войти</button>
         </form>
     </div>
