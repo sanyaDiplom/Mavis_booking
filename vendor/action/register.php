@@ -50,7 +50,7 @@
 
 	unset($_SESSION['regform']);
 	$_SESSION['massage']['reg'] = "Вы успешно зарегистрированы!";
-	return header("Location:../../sigin.php");
+	header("Location:../../sigin.php");
 	}
 	else header("Location: ../../registration.php"); 		
 ?>

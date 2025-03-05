@@ -9,11 +9,12 @@ if(!empty($_POST["login"]) && !empty($_POST["password"])){
 	$result = $stmt->get_result();
     if($result->num_rows == 0){
         $_SESSION['massage']['auto'] = "Неверный логин или пароль!";
+    } else {
+        $user = $result->fetch_assoc();
+        $_SESSION['users']['id'] = $user['id'];
+        $_SESSION['users']['status'] = $user['status'];
+        // var_dump($_SESSION['users']);
     }
-	$user = $result->fetch_assoc();
-    $_SESSION['users']['id'] = $user['id'];
-    $_SESSION['users']['status'] = $user['status'];
-    // var_dump($_SESSION['users']);
     }
     if(!isset($_SESSION['massage'])){
 	
