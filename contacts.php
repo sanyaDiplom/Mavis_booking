@@ -3,6 +3,9 @@
         include('vendor/components/header.php');
 ?>
 <main class="main">
+    <div class="container">
+        
+    </div>
 </main>
 <!--Добавляем подвал-->
 <?php
