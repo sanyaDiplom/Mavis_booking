@@ -365,7 +365,7 @@ body {
     padding-bottom: 25px;
 }
 
-.contacts h2,h3{
+.contacts h2{
     padding-top: 25px;
     padding-bottom: 25px;
 }
@@ -374,9 +374,6 @@ body {
     text-align: left;
 }
 
-.contacts h2{
-    text-align: left;
-}
 .about p{
     font-size: 20px;
     padding-bottom: 20px;

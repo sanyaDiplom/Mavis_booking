@@ -6,7 +6,7 @@
     <div class="container">
             <div class="contacts">
             <h2 class="cards_title"> Санкт-Петербург</h2>
-            <h3 class="cards_title">Головной офис ИСГ «МАВИС»</h3>  
+            <h2 class="cards_title">Головной офис ИСГ «МАВИС»</h2>  
             <p class="cards_description">Расположен в 10 минутах ходьбы от ст. метро «Автово». Здесь  
             же находится центральный отдел продаж компании.</p>
             <p>Дорога на Турухтанные острова, д. 6</p>

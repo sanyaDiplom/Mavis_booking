@@ -3,6 +3,7 @@
         include('vendor/components/header.php');
 ?>
     <main class="main">
+    <!--Карточка выбранной квартиры -->
     </main>
     <!--Добавляем подвал-->
 <?php

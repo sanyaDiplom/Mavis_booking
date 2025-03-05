@@ -1,7 +1,6 @@
 <!-- Добавляем шапку -->
 <?php
-        include('vendor/components/header.php');
-        
+        include('vendor/components/header.php');       
 ?>
 <main class="main">
         <section class="reg_setion">

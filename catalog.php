@@ -3,6 +3,8 @@
         include('vendor/components/header.php');
 ?>
 <main class="main">
+<!--Загружаем доступные квартиры из базы в виде карточек-->
+
 </main>
 <!--Добавляем подвал-->
 <?php
