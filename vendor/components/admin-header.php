@@ -27,15 +27,15 @@
                             if($_SESSION['users']['status']=='2') {
                             //Доступно только администратору, менеджеры не видят
                         ?>
-                        <li class="menu_item"><a href="./admin/users.php" class = 'menu_link'>Управление пользователями</a></li>
+                        <li class="menu_item"><a href="./admin/users-admin.php" class = 'menu_link'>Управление пользователями</a></li>
                         <?php } else if($_SESSION['users']['status']=='1'){
                             //Доступно только менеджеру;
                          ?>
                         <li class="menu_item"><a href="./admin/admin-support.php" class = 'menu_link'>Написать администратору</a></li>    
                         <?php }} ?>
-                        <li class="menu_item"><a href="./admin/projects.php" class = 'menu_link'>Управление проектами</a></li>
-                        <li class="menu_item"><a href="./admin/apparts.php" class = 'menu_link'>Управление квартирами</a></li>
-                        <li class="menu_item"><a href="./admin/booking.php" class = 'menu_link'>Управление бронированиями</a></li>
+                        <li class="menu_item"><a href="./admin/projects-admin.php" class = 'menu_link'>Управление проектами</a></li>
+                        <li class="menu_item"><a href="./admin/apparts-admin.php" class = 'menu_link'>Управление квартирами</a></li>
+                        <li class="menu_item"><a href="./admin/booking-admin.php" class = 'menu_link'>Управление бронированиями</a></li>
                         <li class="menu_item"><a href="./admin/feedback-admin.php" class = 'menu_link'>Управление обратной связью</a></li>
                         <li class="menu_item"><a href="./index.php" class = 'menu_link'>Выйти из панели</a></li>
                     </ul>
