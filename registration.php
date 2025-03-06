@@ -6,7 +6,7 @@
         <section class="reg_setion">
             <div class="container">
                 <div class = 'reg_row'>
-                    <h1 class="cards_title" id="reg" name="reg">Регистрация</div>
+                <h1 class="cards_title" id="reg" name="reg">Регистрация</div>
                     <form action="vendor/action/register.php" method="POST" class="reg_form">
                     <?php if(isset($_SESSION['errors'])){
                             foreach($_SESSION['errors'] as $key=> $value){ ?>

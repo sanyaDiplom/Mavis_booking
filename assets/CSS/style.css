@@ -3,19 +3,15 @@
     margin:0;
     padding: 0;
 }
-
 body {
     width: 100%;
 }
-
 .container{
     max-width: 1290px;  
     padding: 0 15px;
     margin: 0 auto;
 }
-
 /* Шапка */
-
 .header{
     width:100%;
     color: white;
@@ -23,14 +19,12 @@ body {
     background: #1b3764;
 	box-sizing: border-box;
 }
-
 .menu{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
 .submenu {
     background: white;
     border: 2px solid #003559;
@@ -44,19 +38,16 @@ body {
     transform-origin: 0% 0%;
     transition: .6s ease-in-out; 
 }
-
 .menu > li:hover .submenu{
     visibility: visible;
     opacity: 1;
     transform: perspective(600px) rotateX(0deg);
 }
-
 .submenu li a {
     color: #1b3764;
     font-size: 13px;
     line-height: 36px;
 }
-
 .submenu li::after{
     content: "";
     height: 3px;
@@ -64,32 +55,26 @@ body {
     background-color:  #1b3764;
     transition: .5s ease-in-out;
 }
-
 .submenu li:hover::after{
     width: 40%;
 }
-
 .header_row{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 .header_logo{
     display: flex;
     flex-direction: row;   
     align-items: center;
     flex-grow: 1;
 }
-
 .logo_img{
     margin-right: 10px;
 }
-
 .header_menu{
     flex-grow: 3;
 }
-
 .menu_item, .menu_item_down{
     list-style: none;
     display: flex;
@@ -97,14 +82,12 @@ body {
     padding-left: 20px;
     position: relative;
 }
-
 .menu_link{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
 }
-
 .menu_item::after{
     content: "";
     height: 3px;
@@ -112,16 +95,12 @@ body {
     background-color:  white;
     transition: .5s ease-in-out;
 }
-
 .menu_item:hover::after{
     width: 50%;
 }
-
-
 .main{
     min-height: calc(100vh - 375px);
 }
-
 /* Баннер */
 .banner_sec{
     padding: 100px 0;
@@ -129,17 +108,14 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 .banner_title{
     font-size: 48px;
     padding-bottom: 40px;
 }
-
 .banner_title, .banner_description{
     text-align: center;
     color: white;
 }
-
 .banner_description{
     display: flex;
     justify-content: center;
@@ -157,7 +133,6 @@ body {
     text-transform: uppercase;
     font-weight: bold;
 }
-
 .banner_menu:first-of-type{
     padding-left: 0;
 }
@@ -168,11 +143,9 @@ body {
     background-color:  white;
     transition: .5s ease-in-out;
 }
-
 .banner_menu:hover::after{
     width: 50%;
 }
-
 .sec_banner_photo, .sec_banner_aviator, .sec_banner_urbanist, .sec_banner_grafica{
     padding: 200px 0;
     
@@ -197,22 +170,18 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 .sec_banner_botom{
     padding: 25px 0;
     background: #1b3764;
 }
-
 /* Карточки */
 .cards_sec{
     padding: 50px 0px;
 }
-
 .cards_title, .cards_description{
     color: #151c39;
     text-align: center;
 }
-
 .card{
     padding: 25px;
     margin-top: 25px;
@@ -221,8 +190,6 @@ body {
     box-shadow: 0px 2px 7px 0px #9e90ff;
     text-align: center;
 }
-
-
 .card_link{
     text-decoration: none;
     color: white;
@@ -265,6 +232,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .reg_form, .auto_form, .reg_error {
 	width: 60%;
