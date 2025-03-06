@@ -179,6 +179,12 @@ body {
     background-size: cover;
     background-position: center;
 }
+.sec_banner_aviator{
+    padding: 200px 0;
+    background: url(assets/img/aviator02.jpg);
+    background-size: cover;
+    background-position: center;
+}
 
 .sec_banner_botom{
     padding: 25px 0;

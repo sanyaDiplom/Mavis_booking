@@ -5,8 +5,7 @@
 <!--Страница с подробным описанием проекта-->
     <main class="main">
         <!--Баннер пока статичный, позже заменить на слайдер-->
-        <section class="sec_banner_photo">
-            
+        <section class="sec_banner_photo">    
         </section>
         <section class="sec_banner_botom">
         <div class="container">
