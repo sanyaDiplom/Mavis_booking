@@ -23,10 +23,11 @@
                 <!--Главное меню-->
                 <div class="header_menu">
                     <ul class="menu">
-                        <li class="menu_item"><a href="#" class = 'menu_link'>Личные данные</a></li>
-                        <li class="menu_item"><a href="#" class = 'menu_link'>Избранное</a></li>
-                        <li class="menu_item"><a href="#" class = 'menu_link'>Мои бронирования</a></li>
-                        <li class="menu_item"><a href="#" class = 'menu_link'>Обратная связь</a></li>
+                        <li class="menu_item"><a href="./account/profile.php" class = 'menu_link'>Личные данные</a></li>
+                        <li class="menu_item"><a href="./account/favorits.php" class = 'menu_link'>Избранное</a></li>
+                        <li class="menu_item"><a href="./account/my-booking.php" class = 'menu_link'>Мои бронирования</a></li>
+                        <li class="menu_item"><a href="./feedback.php" class = 'menu_link'>Обратная связь</a></li>
+                        <li class="menu_item"><a href="feedback-form.php" class = 'menu_link'>Написать заявку</a></li>
                         <li class="menu_item"><a href="./index.php" class = 'menu_link'>Выйти из кабинета</a></li>
                     </ul>
                 </div>
