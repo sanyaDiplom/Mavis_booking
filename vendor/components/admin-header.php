@@ -22,6 +22,8 @@
                 </div>
                 <!--Главное меню-->
                 <div class="header_menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
                     <ul class="menu">
                         <?php if(isset($_SESSION['users'])){
                             if($_SESSION['users']['status']=='2') {

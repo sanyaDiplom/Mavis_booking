@@ -22,6 +22,8 @@
                 </div>
                 <!--Главное меню-->
                 <div class="header_menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
                     <ul class="menu">
                         <li class="menu_item"><a href="./account.php" class = 'menu_link'>Личные данные</a></li>
                         <li class="menu_item"><a href="./favorits.php" class = 'menu_link'>Избранное</a></li>

@@ -22,6 +22,8 @@
                 </div>
                 <!--Главное меню-->
                 <div class="header_menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
                     <ul class="menu">
                         <li class="menu_item"><a href="./index.php" class = 'menu_link'>Главная</a></li>
                         <li class="menu_item_down"><a href="./index.php#project" class = 'menu_link' class="down">Проекты</a>
