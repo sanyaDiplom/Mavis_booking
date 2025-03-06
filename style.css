@@ -173,15 +173,22 @@ body {
     width: 50%;
 }
 
-.sec_banner_photo{
+.sec_banner_photo, .sec_banner_aviator, .sec_banner_urbanist{
     padding: 200px 0;
+    
+}
+.sec_banner_photo{
     background: url(assets/img/photograf01.jpg);
     background-size: cover;
     background-position: center;
 }
 .sec_banner_aviator{
-    padding: 200px 0;
     background: url(assets/img/aviator02.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.sec_banner_urbanist{
+    background: url(assets/img/urbanist02.jpg);
     background-size: cover;
     background-position: center;
 }

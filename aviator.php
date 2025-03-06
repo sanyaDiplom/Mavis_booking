@@ -4,13 +4,13 @@
 ?>
 <!--Страница с подробным описанием проекта-->
     <main class="main">
-           <!--Баннер пока статичный, позже заменить на слайдер-->
+        <!--Баннер пока статичный, позже заменить на слайдер-->
         <section class="sec_banner_aviator">    
         </section>
         <section class="sec_banner_botom">
         <div class="container">
                 <div class="banner_text">
-                     <h1 class="banner_title">ЖК Авиатор</h1>
+                     <h1 class="banner_title">ЖК «Авиатор»</h1>
                     <div class="banner_description">
                         <div class="banner_menu"><a href="#advantages" class = 'banner_link'>О проекте</a></div>
                         <div class="banner_menu"><a href = './catalog.php' class = 'banner_link'>Забронировать квартиру</a></div>
@@ -52,7 +52,7 @@
                         <img class = 'card_img' src="assets/img/aviator04.jpg">
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Современная технология строительства</h3>
-                            <div class = 'card_text'>ома возводятся в соответствии с современными 
+                            <div class = 'card_text'>Дома возводятся в соответствии с современными 
                                 требованиями домостроения по кирпично-монолитной технологии, 
                                 которая является залогом прочности и долговечности конструкции, 
                                 отличается экологичностью и имеет повышенные теплоизоляционные свойства.</div>
@@ -97,8 +97,7 @@
                                 территории предусмотрен крытый многоуровневый паркинг с возможностью 
                                 установки зарядных станций для электромобилей. </div>
                         </div>   
-                    </div>
-                    
+                    </div>               
                 </div>
                 </div>
             </div>
