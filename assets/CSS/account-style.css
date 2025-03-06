@@ -1,0 +1,12 @@
+.textarea_feedback{
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 100%;
+	outline: none;
+	margin: 10px 5px;
+	transition: .2s;
+	font-size: 14pt;
+	padding-left: 10px;
+	border: solid 1px black;
+}
