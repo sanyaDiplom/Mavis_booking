@@ -173,7 +173,7 @@ body {
     width: 50%;
 }
 
-.sec_banner_photo, .sec_banner_aviator, .sec_banner_urbanist{
+.sec_banner_photo, .sec_banner_aviator, .sec_banner_urbanist, .sec_banner_grafica{
     padding: 200px 0;
     
 }
@@ -189,6 +189,11 @@ body {
 }
 .sec_banner_urbanist{
     background: url(assets/img/urbanist02.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.sec_banner_grafica{
+    background: url(assets/img/grafika.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -257,6 +262,7 @@ body {
 
 .card_img:hover {
     box-shadow: 0px 2px 7px 0px #9e90ff;
+    opacity: .5;
 }
 
 /* Стили для форм регистрации, авторизации */

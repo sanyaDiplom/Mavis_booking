@@ -29,8 +29,7 @@
             <div class = 'cards'>
                 <div class = 'cards_row'>
                     <div class = 'card'>
-
-                        <img class = 'card_img' src="assets/img/aviator.jpg">
+                        <a href="aviator.php"><img class = 'card_img' src="assets/img/aviator.jpg"></a>
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Авиатор</h3>
                             <div class = 'card_text'>1265 квартир. Сдача в 2027 году.</div>
@@ -40,11 +39,9 @@
                             </div>
                             </a>
                         </div>
-
                     </div>
                     <div class = 'card'>
-
-                        <img class = 'card_img' src="assets/img/fotograf.jpg">
+                        <a href="photo.php"><img class = 'card_img' src="assets/img/fotograf.jpg"></a>
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Фотограф</h3>
                             <div class = 'card_text'>628 квартир. Сдача в 2025 году.</div>
@@ -54,12 +51,9 @@
                             </div>
                             </a>
                         </div>
-
                     </div>
-
                     <div class = 'card'>
-
-                        <img class = 'card_img' src="assets/img/urbanist.jpg">
+                        <a href="urbanist.php"><img class = 'card_img' src="assets/img/urbanist.jpg"></a>
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Урбанист</h3>
                             <div class = 'card_text'>628 квартир. Сдача в 2025 году.</div>
@@ -69,10 +63,9 @@
                             </div>
                             </a>
                         </div>
-
                     </div>
                     <div class = 'card'>
-                        <img class = 'card_img' src="assets/img/grafika.jpg">
+                        <a href="grafica.php"><img class = 'card_img' src="assets/img/grafika.jpg"></a>
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Графика</h3>
                             <div class = 'card_text'>405 квартир. Сдача с 2026 году.</div>
@@ -82,12 +75,9 @@
                             </div>
                             </a>
                         </div>
-
                     </div>
-                </div>
-                
+                </div>                
             </div>
-
         </div>
         </section>
     </main>
