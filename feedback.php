@@ -1,6 +1,6 @@
 <!-- Добавляем шапку -->
 <?php
-        include('./vendor/components/account-header.php');
+        include('vendor/components/account-header.php');
 ?>
 <main class="main">
     <?php
@@ -12,5 +12,5 @@
 </main>
 <!--Добавляем подвал-->
 <?php
-    include('./vendor/components/footer.php');
+    include('vendor/components/footer.php');
 ?>

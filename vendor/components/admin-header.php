@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МАВИС</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
 </head>
 <body>
     <!--Начало шапки-->
@@ -27,16 +27,16 @@
                             if($_SESSION['users']['status']=='2') {
                             //Доступно только администратору, менеджеры не видят
                         ?>
-                        <li class="menu_item"><a href="./admin/users-admin.php" class = 'menu_link'>Управление пользователями</a></li>
+                        <li class="menu_item"><a href="./users-admin.php" class = 'menu_link'>Управление пользователями</a></li>
                         <?php } else if($_SESSION['users']['status']=='1'){
                             //Доступно только менеджеру;
                          ?>
-                        <li class="menu_item"><a href="./admin/admin-support.php" class = 'menu_link'>Написать администратору</a></li>    
+                        <li class="menu_item"><a href="./admin-support.php" class = 'menu_link'>Написать администратору</a></li>    
                         <?php }} ?>
-                        <li class="menu_item"><a href="./admin/projects-admin.php" class = 'menu_link'>Управление проектами</a></li>
-                        <li class="menu_item"><a href="./admin/apparts-admin.php" class = 'menu_link'>Управление квартирами</a></li>
-                        <li class="menu_item"><a href="./admin/booking-admin.php" class = 'menu_link'>Управление бронированиями</a></li>
-                        <li class="menu_item"><a href="./admin/feedback-admin.php" class = 'menu_link'>Управление обратной связью</a></li>
+                        <li class="menu_item"><a href="./projects-admin.php" class = 'menu_link'>Управление проектами</a></li>
+                        <li class="menu_item"><a href="./apparts-admin.php" class = 'menu_link'>Управление квартирами</a></li>
+                        <li class="menu_item"><a href="./booking-admin.php" class = 'menu_link'>Управление бронированиями</a></li>
+                        <li class="menu_item"><a href="./feedback-admin.php" class = 'menu_link'>Управление обратной связью</a></li>
                         <li class="menu_item"><a href="./index.php" class = 'menu_link'>Выйти из панели</a></li>
                     </ul>
                 </div>

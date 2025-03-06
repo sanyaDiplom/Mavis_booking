@@ -125,7 +125,7 @@ body {
 /* Баннер */
 .banner_sec{
     padding: 100px 0;
-    background: url(assets/img/urbanist.jpg);
+    background: url(../img/urbanist.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -178,22 +178,22 @@ body {
     
 }
 .sec_banner_photo{
-    background: url(assets/img/photograf01.jpg);
+    background: url(../img/photograf01.jpg);
     background-size: cover;
     background-position: center;
 }
 .sec_banner_aviator{
-    background: url(assets/img/aviator02.jpg);
+    background: url(../img/aviator02.jpg);
     background-size: cover;
     background-position: center;
 }
 .sec_banner_urbanist{
-    background: url(assets/img/urbanist02.jpg);
+    background: url(../img/urbanist02.jpg);
     background-size: cover;
     background-position: center;
 }
 .sec_banner_grafica{
-    background: url(assets/img/grafika.jpg);
+    background: url(../img/grafika.jpg);
     background-size: cover;
     background-position: center;
 }
