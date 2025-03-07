@@ -9,6 +9,7 @@
         header("Location:../sigin.php");
     }?>
     <div class="container">
+    <h2 class="cards_title" id="reg" name="reg">Список менеджеров</h2>
     <div class="project_row">
     <?php
     $status = '1'; 
@@ -38,7 +39,7 @@
     </div>
     <!-- Добавить менеджера, пользуемся формой регистрации, тоьлко по умолчению ставим статус менеджер -->
     <div class = 'reg_row'>
-                <h1 class="cards_title" id="reg" name="reg">Добавит менеджера</div>
+                <h2 class="cards_title" id="reg" name="reg">Добавит менеджера</h2></div>
                     <form action="vendor/action/add-user.php" method="POST" class="reg_form">
                     <?php if(isset($_SESSION['errors'])){
                             foreach($_SESSION['errors'] as $key=> $value){ ?>

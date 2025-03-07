@@ -6,12 +6,12 @@
 <?php
     // Проверяем на права доступа
     if(!isset($_SESSION['users'])||$_SESSION['users']['status']==0){
-        header("Location:./sigin.php");
-    }
-    header("Location:./users-admin.php");
-?>
+        header("Location:../sigin.php");
+    }?>
+    <div class="container">
+</div>
 </main>
 <!--Добавляем подвал-->
 <?php
     include('vendor/components/footer.php');
-?>    
+?>
