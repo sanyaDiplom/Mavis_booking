@@ -23,6 +23,9 @@
     align-items: center;
 }
 
+.card_button{
+    color: white;
+}
 @media screen and (max-width: 1120px) {
     .projects{
         flex-direction: column;

@@ -34,6 +34,7 @@
 	$stmt->execute();
 
 	$_SESSION['massege']['user-update'] = "Данные успешно изменены!";
+    
 	header("Location:../../account.php");
 	}
 	else{

@@ -19,15 +19,22 @@
 	$result = $stmt->bind_result($id,$login,$surname,$name,$patronymic);
     while($stmt->fetch()){?>
         <div class="projects">
-        <input type="hidden" name='id' <?php echo $id ?>>
         <div class="project_admin">
         <?php echo $surname . ' ' . $name . ' ' . $patronymic ?></div>
         <div class="project_admin">
         <?php echo $login ?></div>
-        <a href="" name='delete' class="card_link"><div class="card_button">Изменить</div></a>
-        <a href="" name='delete' class="card_link"><div class="card_button">Удалить</div></a>
+        <form action="vendor/action/user-delete.php" method="get">
+        <input type="hidden" name='id' value=<?php echo $id ?>>
+        <button class="card_button">Удалить</button></a>
+        </form>
         </div>
     <?php } ?>
+    <?php if(isset($_SESSION['massege'])){
+            foreach($_SESSION['massege'] as $key=> $value){ ?>
+                <p class="reg_error"> <?php echo $value; ?></p>    
+            <?php }
+            unset($_SESSION['massege']);
+            }?>
     </div>
     <!-- Добавить менеджера, пользуемся формой регистрации, тоьлко по умолчению ставим статус менеджер -->
     <div class = 'reg_row'>
