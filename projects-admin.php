@@ -12,7 +12,7 @@
     <h2 class="cards_title" id="reg" name="reg">Список проектов</h2>
     <div class="project_row">
     <?php $stmt = $connect->prepare("SELECT * FROM `projects`");
-	$stmt->execute();
+	$stmt->execute(); 
 	$result = $stmt->bind_result($id, $name, $description, $img);
     while($stmt->fetch()){?>
         <div class="projects">
