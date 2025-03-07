@@ -25,11 +25,11 @@
 	if(empty($_POST["password"])){
 		$_SESSION['errors']['password'] = "Поле Пароль обязательно для заполнения!";
 	}
-	// //Проверка на совпадение паролей;
+	//Проверка на совпадение паролей;
 	if($_POST['password']!=$_POST['password_repeat']){
 		$_SESSION['errors']['password'] = "Пароли не совпадают!";
 	}
-	// //Проверка на уникальность логина;
+	//Проверка на уникальность логина;
 	$stmt = $connect->prepare("SELECT * FROM `users` WHERE `login`=?");
 	$stmt->bind_param("s",$_POST["login"]);
 	$stmt->execute();
@@ -38,9 +38,9 @@
 	if($user){
 		$_SESSION['errors']['newlogin'] = "Такой логин уже существует! Придумайте другой логин!";
 	}
-	// //Кешируем пароль;
+	//Кешируем пароль;
 	$password = md5($_POST['password']);
-	// //Используем подготавливаемые запросы для защиты от SQL-инъекций;
+	//Используем подготавливаемые запросы для защиты от SQL-инъекций;
 	if(!isset($_SESSION['errors'])){
 	$stmt = $connect->prepare("INSERT INTO users(`login`,`name`,`patronymic`, 
 	`surname`,`email`,`tel`,`password`) VALUES (?, ?, ?, ?, ?, ?, ?)");

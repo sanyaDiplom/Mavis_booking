@@ -8,6 +8,7 @@
     if(!isset($_SESSION['users'])||$_SESSION['users']['status']==0){
         header("Location:../sigin.php");
     }
+    
 ?>
 </main>
 <!--Добавляем подвал-->

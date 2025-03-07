@@ -12,7 +12,7 @@
     <section class="reg_setion">
             <div class="container">
                 <div class = 'reg_row'>
-                <h1 class="cards_title">Оставить обращение</div>
+                <h1 class="cards_title">Оставить сообщение менеджеру</div>
                     <form action="vendor/action/user-feedback.php" method="POST" class="reg_form">
                     <?php if(isset($_SESSION['errors'])){
                             foreach($_SESSION['errors'] as $key=> $value){ ?>
