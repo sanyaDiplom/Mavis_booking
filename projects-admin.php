@@ -32,6 +32,12 @@
         </form>
         </div>
     <?php } ?>
+    <?php if(isset($_SESSION['massege'])){
+            foreach($_SESSION['massege'] as $key=> $value){ ?>
+                <p class="reg_error"> <?php echo $value; ?></p>    
+            <?php }
+            unset($_SESSION['massege']);
+            }?>
     </div>
     <!-- Добавить проект -->
     <div class = 'reg_row'>
