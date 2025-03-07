@@ -13,6 +13,5 @@
     }
     else{
         header("Location:../../users-admin.php");
-    }
-	
+    }	
 ?>
