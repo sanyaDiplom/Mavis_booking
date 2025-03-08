@@ -12,23 +12,28 @@
 <div class="container">
     <h2 class="cards_title" id="reg" name="reg">Список квартир</h2>
     <div class="project_row">
-    <?php $stmt = $connect->prepare("SELECT * FROM `apparts`");
-	$stmt->execute();
-    $result = $stmt->bind_result($id, $project_id, $adress, $number, $floor, $status_id);
-    while($stmt->fetch()){?>
+    <?php $result = $connect->query("SELECT *, (SELECT `name` FROM `projects` WHERE `id`=`project_id`) as `project`  FROM `apparts`");
+    if(!$result){
+        return die ("Ошибка получения данных: ". $connect->error);
+    }
+    while($row = $result->fetch_assoc()){?>
         <div class="projects">
         <div class="project_admin">
-        <?php echo $adress ?></div>
+        <?php echo $row['project'] ?></div>
         <div class="project_admin">
-        <?php echo $number ?></div>
+        <?php echo $row['adress'] ?></div>
         <div class="project_admin">
-        <?php echo $floor ?></div>
+        <?php echo $row['number'] ?></div>
+        <div class="project_admin">
+        <?php echo $row['floor'] ?></div>
+        <div class="project_admin">
+        <?php echo $row['price'] ?></div>
         <form action="update-project.php" method="get">
-        <input type="hidden" name='id' value=<?php echo $id ?>>
+        <input type="hidden" name='id' value=<?php echo $row['id'] ?>>
         <button class="card_button">Изменить</button>
         </form>
         <form action="vendor/action/delete-project.php" method="get">
-        <input type="hidden" name='id' value=<?php echo $id ?>>
+        <input type="hidden" name='id' value=<?php echo $row['id'] ?>>
         <button class="card_button">Удалить</button>
         </form>
         </div>
@@ -40,34 +45,71 @@
             unset($_SESSION['massege']);
             }?>
     </div>
-    <!-- Добавить проект -->
+    <!-- Добавить квартиру -->
     <div class = 'reg_row'>
                 <h2 class="cards_title" id="reg" name="reg">Добавит квартиру</h2></div>
                     <form enctype="multipart/form-data" action="vendor/action/add-project.php" method="POST" class="reg_form">
                     <?php if(isset($_SESSION['errors'])){
                             foreach($_SESSION['errors'] as $key=> $value){ ?>
-                            <p class="reg_error"> <?php echo $value; ?></p>    
+                            <p class="reg_error"> <?php echo $value; ?></p>    -
                         <?php }
                         unset($_SESSION['errors']);
                         }?>
+                        <?php  $result = $connect->query("SELECT * FROM `projects`");?>
+                        <select class="reg_select"  name="project"  id="project">
+                        <option  value="">-- Выберите проект --</option>
+                        <?while($row=$result->fetch_assoc()){?>
+                            <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
+                        <?php }?> 
+                        </select>
+                        <?php  $result = $connect->query("SELECT * FROM `type_apparts`");?>
+                        <select class="reg_select"  name="project"  id="project">
+                        <option  value="">-- Выберите тип квартиры --</option>
+                        <?while($row=$result->fetch_assoc()){?>
+                            <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
+                        <?php }?> 
+                        </select>
+                        <select class="reg_select"  name="project"  id="project">
+                        <option  value="">-- Выберите этаж --</option>
+                        <?php $i=1;
+                         while($i<23){?>
+                            <option  value="<?php echo $i?>"><?php echo $i?></option>
+                           <?php $i++;
+                        }?>
                         <input class="reg_input"
                             type="text"
-                            placeholder="Название проекта"
-                            name="name"
+                            placeholder="Адрес"
+                            name="addres"
                             required
                             <?php 
                             if(isset($_SESSION['regform'])){?>
-                                value=<?php echo $_SESSION['regform']['name'];}?>
+                                value=<?php echo $_SESSION['regform']['adress'];}?>
                         />
+                        </select>
                         <input class="reg_input"
                             type="text"
-                            placeholder="Описание проекта"
-                            name="description"
+                            placeholder="Номер квартиры"
+                            name="number"
                             required
                             <?php 
                             if(isset($_SESSION['regform'])){?>
-                                value=<?php echo $_SESSION['regform']['description'];}?>
+                                value=<?php echo $_SESSION['regform']['number'];}?>
                         />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Стоимость"
+                            name="price"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['price'];}?>
+                        />
+                        <?php  $result = $connect->query("SELECT * FROM `booking_status`");?>
+                        <select class="reg_select"  name="status"  id="status">
+                        <option  value="">-- Выберите статус бронирования --</option>
+                        <?while($row=$result->fetch_assoc()){?>
+                            <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
+                        <?php }?>
                         <input class="reg_input"
                             type="file"
                             placeholder="Изображение"

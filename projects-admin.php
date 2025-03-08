@@ -20,7 +20,7 @@
         <?php echo $name ?></div>
         <div class="project_admin">
         <?php echo $description ?></div>
-        <div class="project_admin">
+        <div class="project_admin"><img src="<?php echo $img ?>" width=50%>
         <?php echo $img ?></div>
         <form action="update-project.php" method="get">
         <input type="hidden" name='id' value=<?php echo $id ?>>
