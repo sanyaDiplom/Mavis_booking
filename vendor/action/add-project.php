@@ -25,7 +25,7 @@ include "../components/core.php";
 	$stmt->bind_param("sss",$_POST["name"],$_POST["description"],$new_name);
 	$stmt->execute();
 
-	$_SESSION['massege']['project'] = "Данные успешно изменены!";
+	$_SESSION['massege']['project'] = "Данные успешно добавлены!";
     
 	header("Location:../../projects-admin.php");
 	}

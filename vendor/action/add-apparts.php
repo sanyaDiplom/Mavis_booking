@@ -14,13 +14,15 @@ include "../components/core.php";
         $_SESSION['errors']['img'] = "Поле Изображение обязательно для заполнения!";
     }
 	if(!isset($_SESSION['errors'])){
-	$stmt = $connect->prepare("INSERT INTO `apparts` SET `project_id`=?, `adress`=?, 
-    `number`=?, `floor`=?, `type_id`=?, `img`=?, `price`=?, `status_id`=? ");
-	$stmt->bind_param("ssssssss",$_POST["project"],$_POST["addres"],$_POST["number"],
-    $_POST["floor"],$_POST["type"],$new_name,$_POST["price"],$_POST["status"]);
+	$stmt = $connect->prepare("INSERT INTO `apparts` SET `project_id`=?, `corpus`=?, 
+    `number`=?, `floor`=?, `type_id`=?, `img`=?, `price`=?, `status_id`=?, `section`=?, 
+    `square_1`=?, `square_2`=?, `ceiling_height`=?, `finishing`=?");
+	$stmt->bind_param("sssssssssssss",$_POST["project"],$_POST["corpus"],$_POST["number"],
+    $_POST["floor"],$_POST["type"],$new_name,$_POST["price"],$_POST["status"],
+    $_POST["section"],$_POST["square_1"],$_POST["square_2"],$_POST["ceiling_height"],$_POST["finishing"]);
 	$stmt->execute();
 
-	$_SESSION['massege']['project'] = "Данные успешно изменены!";
+	$_SESSION['massege']['project'] = "Данные успешно добавлены!";
     
 	header("Location:../../apparts-admin.php");
 	}

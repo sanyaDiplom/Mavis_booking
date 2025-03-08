@@ -21,11 +21,13 @@
         <div class="project_admin">
         <?php echo $row['project'] ?></div>
         <div class="project_admin">
-        <?php echo $row['adress'] ?></div>
+        <?php echo 'корпус'. " " .$row['corpus'] ?></div>
         <div class="project_admin">
-        <?php echo $row['number'] ?></div>
+        <?php echo 'секция'. " " .$row['section'] ?></div>
         <div class="project_admin">
-        <?php echo $row['floor'] ?></div>
+        <?php echo 'номер квартиры'. " ".$row['number'] ?></div>
+        <div class="project_admin">
+        <?php echo 'этаж'. " ". $row['floor'] ?></div>
         <div class="project_admin">
         <?php echo $row['price'] ?></div>
         <form action="update-apparts.php" method="get">
@@ -76,24 +78,69 @@
                             <option  value="<?php echo $i?>"><?php echo $i?></option>
                            <?php $i++;
                         }?>
-                        <input class="reg_input"
-                            type="text"
-                            placeholder="Адрес"
-                            name="addres"
-                            required
-                            <?php 
-                            if(isset($_SESSION['regform'])){?>
-                                value=<?php echo $_SESSION['regform']['adress'];}?>
-                        />
                         </select>
                         <input class="reg_input"
                             type="text"
+                            placeholder="Корпус"
+                            name="corpus"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['corpus'];}?>
+                        />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Секция"
+                            name="section"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['section'];}?>
+                        />
+                        <input class="reg_input"
+                            type="number"
                             placeholder="Номер квартиры"
                             name="number"
                             required
                             <?php 
                             if(isset($_SESSION['regform'])){?>
                                 value=<?php echo $_SESSION['regform']['number'];}?>
+                        />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Общая площадь"
+                            name="square_1"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['square_1'];}?>
+                        />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Жилая площадь"
+                            name="square_2"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['square_2'];}?>
+                        />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Высота потолков"
+                            name="ceiling_height"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['ceiling_height'];}?>
+                        />
+                        <input class="reg_input"
+                            type="text"
+                            placeholder="Отделка"
+                            name="finishing"
+                            required
+                            <?php 
+                            if(isset($_SESSION['regform'])){?>
+                                value=<?php echo $_SESSION['regform']['ceiling_height'];}?>
                         />
                         <input class="reg_input"
                             type="text"
