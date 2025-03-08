@@ -28,11 +28,11 @@
         <?php echo $row['floor'] ?></div>
         <div class="project_admin">
         <?php echo $row['price'] ?></div>
-        <form action="update-project.php" method="get">
+        <form action="update-apparts.php" method="get">
         <input type="hidden" name='id' value=<?php echo $row['id'] ?>>
         <button class="card_button">Изменить</button>
         </form>
-        <form action="vendor/action/delete-project.php" method="get">
+        <form action="vendor/action/delete-apparts.php" method="get">
         <input type="hidden" name='id' value=<?php echo $row['id'] ?>>
         <button class="card_button">Удалить</button>
         </form>
