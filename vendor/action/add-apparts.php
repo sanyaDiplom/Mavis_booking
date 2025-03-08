@@ -1,12 +1,5 @@
 <?php
 include "../components/core.php";
-    //Проверка на заполненость полей;
-	if(empty($_POST["name"])){
-		$_SESSION['errors']['name'] = "Поле Название обязательно для заполнения!";
-	}
-	if(empty($_POST["description"])){
-		$_SESSION['errors']['description'] = "Поле Описание обязательно для заполнения!";
-	}
 	// Проверка загруженного файла, что это изображение, 
     // сохранение файла в нужную директорию, а в БД путь до него;
     if(!empty($_FILES['img'])){
@@ -21,15 +14,17 @@ include "../components/core.php";
         $_SESSION['errors']['img'] = "Поле Изображение обязательно для заполнения!";
     }
 	if(!isset($_SESSION['errors'])){
-	$stmt = $connect->prepare("INSERT INTO projects SET `name`=?, `descreption`=?,`img`=?");
-	$stmt->bind_param("sss",$_POST["name"],$_POST["description"],$new_name);
+	$stmt = $connect->prepare("INSERT INTO `apparts` SET `project_id`=?, `adress`=?, 
+    `number`=?, `floor`=?, `type_id`=?, `img`=?, `price`=?, `status_id`=? ");
+	$stmt->bind_param("ssssssss",$_POST["project"],$_POST["addres"],$_POST["number"],
+    $_POST["floor"],$_POST["type"],$new_name,$_POST["price"],$_POST["status"]);
 	$stmt->execute();
 
 	$_SESSION['massege']['project'] = "Данные успешно изменены!";
     
-	header("Location:../../projects-admin.php");
+	header("Location:../../apparts-admin.php");
 	}
 	else{
-        header("Location: ../../projects-admin.php");  
+        header("Location: ../../apparts-admin.php");  
     }
-    ?> 		    
+    ?>

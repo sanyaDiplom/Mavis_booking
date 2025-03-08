@@ -48,7 +48,7 @@
     <!-- Добавить квартиру -->
     <div class = 'reg_row'>
                 <h2 class="cards_title" id="reg" name="reg">Добавит квартиру</h2></div>
-                    <form enctype="multipart/form-data" action="vendor/action/add-project.php" method="POST" class="reg_form">
+                    <form enctype="multipart/form-data" action="vendor/action/add-apparts.php" method="POST" class="reg_form">
                     <?php if(isset($_SESSION['errors'])){
                             foreach($_SESSION['errors'] as $key=> $value){ ?>
                             <p class="reg_error"> <?php echo $value; ?></p>    -
@@ -56,20 +56,20 @@
                         unset($_SESSION['errors']);
                         }?>
                         <?php  $result = $connect->query("SELECT * FROM `projects`");?>
-                        <select class="reg_select"  name="project"  id="project">
+                        <select class="reg_select"  name="project"  id="project" required>
                         <option  value="">-- Выберите проект --</option>
                         <?while($row=$result->fetch_assoc()){?>
                             <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
                         <?php }?> 
                         </select>
                         <?php  $result = $connect->query("SELECT * FROM `type_apparts`");?>
-                        <select class="reg_select"  name="project"  id="project">
+                        <select class="reg_select"  name="type"  id="type" required>
                         <option  value="">-- Выберите тип квартиры --</option>
                         <?while($row=$result->fetch_assoc()){?>
                             <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
                         <?php }?> 
                         </select>
-                        <select class="reg_select"  name="project"  id="project">
+                        <select class="reg_select"  name="floor"  id="floor" required>
                         <option  value="">-- Выберите этаж --</option>
                         <?php $i=1;
                          while($i<23){?>
@@ -105,7 +105,7 @@
                                 value=<?php echo $_SESSION['regform']['price'];}?>
                         />
                         <?php  $result = $connect->query("SELECT * FROM `booking_status`");?>
-                        <select class="reg_select"  name="status"  id="status">
+                        <select class="reg_select"  name="status"  id="status" required>
                         <option  value="">-- Выберите статус бронирования --</option>
                         <?while($row=$result->fetch_assoc()){?>
                             <option value="<?php echo $row["id"] ?>"><?php echo $row["name"] ?></option>
