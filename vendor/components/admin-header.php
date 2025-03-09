@@ -39,7 +39,8 @@
                         <li class="menu_item"><a href="./projects-admin.php" class = 'menu_link'>Управление проектами</a></li>
                         <li class="menu_item"><a href="./apparts-admin.php" class = 'menu_link'>Управление квартирами</a></li>
                         <li class="menu_item"><a href="./booking-admin.php" class = 'menu_link'>Управление бронированиями</a></li>
-                        <li class="menu_item"><a href="./feedback-admin.php" class = 'menu_link'>Управление обратной связью</a></li>
+                        <li class="menu_item"><a href="./feedback-admin.php" class = 'menu_link'>Обратная связь</a></li>
+                        <li class="menu_item"><a href="./callback.php" class = 'menu_link'>Заявки на звонок</a></li>
                         <li class="menu_item"><a href="./index.php" class = 'menu_link'>Выйти из панели</a></li>
                     </ul>
                 </div>

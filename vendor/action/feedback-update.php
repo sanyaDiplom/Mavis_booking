@@ -6,7 +6,7 @@
 	}
 	if(!isset($_SESSION['errors'])){
     $status = '2';
-    $time = date('Y-m-d h:i:s');
+    $time = date('Y-m-d H:i:s');
 	$stmt = $connect->prepare("UPDATE `feedback` SET `status_id`=?, `meneger_id`=?, `meneger_answer`=?, `time_anser`=? WHERE `id`=?");
 	$stmt->bind_param("sssss",$status,$_SESSION['users']['id'],$_POST["new_feedback"],$time,$_POST['id']);
 	$stmt->execute();
