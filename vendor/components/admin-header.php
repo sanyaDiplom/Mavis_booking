@@ -34,7 +34,7 @@
                         <?php } else if($_SESSION['users']['status']=='1'){
                             //Доступно только менеджеру;
                          ?>
-                        <li class="menu_item"><a href="./admin-support.php" class = 'menu_link'>Написать администратору</a></li>    
+                        <li class="menu_item"><a href="./admin-account.php" class = 'menu_link'>Личные данные</a></li>    
                         <?php }} ?>
                         <li class="menu_item"><a href="./projects-admin.php" class = 'menu_link'>Управление проектами</a></li>
                         <li class="menu_item"><a href="./apparts-admin.php" class = 'menu_link'>Управление квартирами</a></li>
