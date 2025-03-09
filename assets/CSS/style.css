@@ -222,6 +222,7 @@ ul.breadcrumb li a:hover {
 .card_link{
     text-decoration: none;
     color: white;
+    text-align: center;
 }
 
 .card_button{
@@ -229,6 +230,7 @@ ul.breadcrumb li a:hover {
     background: #151c39;
     padding: 10px 70px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .card_title, .card_text{

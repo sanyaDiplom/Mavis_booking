@@ -77,6 +77,8 @@
                                 value=<?php echo $_SESSION['regform']['img'];}?>
                         />
                         <button class="reg_button" name="reg">Добавить</button>
+                        <a class="card_link" href="vendor/action/word.php" target="_blank"><div class="reg_button">
+                        Скачать список</div></a>
                     </form>
                 </div>
     </div>

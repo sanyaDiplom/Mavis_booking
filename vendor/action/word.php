@@ -7,15 +7,20 @@
     $phpWord->setDefaultFontSize(14);
 
     $properties = $phpWord->getDocInfo();
+
+    $section = $phpWord->addSection();
     
-    $properties->setCreator('My name');
-    $properties->setCompany('My factory');
-    $properties->setTitle('My title');
-    $properties->setDescription('My description');
-    $properties->setCategory('My category');
-    $properties->setLastModifiedBy('My name');
-    $properties->setCreated(mktime(0, 0, 0, 3, 12, 2014));
-    $properties->setModified(mktime(0, 0, 0, 3, 14, 2014));
-    $properties->setSubject('My subject');
-    $properties->setKeywords('my, key, word');
+    $stmt = $connect->prepare("SELECT * FROM `projects`");
+	$stmt->execute(); 
+	$result = $stmt->bind_result($id, $name, $description, $img);
+    while($stmt->fetch()){
+        $text = "";
+        $text = $text . "Название проекта: ". $name . " ";
+        $text = $text . "Описание проекта: ". $description;
+        $section ->addText($text,array(),array()); 
+    }
+
+    $objWriter = \PhpOffice\PhpWord\IOFactory::createWriter($phpWord,'Word2007');
+    $objWriter -> save('projects.docx');
+    header("Location: projects.docx");
 ?>
