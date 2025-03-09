@@ -29,7 +29,9 @@
         <div class="project_admin">
         <?php echo 'этаж'. " ". $row['floor'] ?></div>
         <div class="project_admin">
-        <?php echo $row['price'] ?></div>
+        <?php echo $row['price']."₽" ?></div>
+        <div class="project_admin"><img src="<?php echo $row['img'] ?>" width=50%>
+        <?php echo $row['img'] ?></div>
         <form action="update-apparts.php" method="get">
         <input type="hidden" name='id' value=<?php echo $row['id'] ?>>
         <button class="card_button">Изменить</button>

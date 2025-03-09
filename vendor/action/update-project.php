@@ -14,7 +14,12 @@ include "../components/core.php";
         if('image' != substr($img['type'], 0, 5)){
             $_SESSION['errors']['img'] = "Неверный формат файла!";
         }
-        $name = uniqid().'.'.substr($img['type'], 6);
+        if(substr($img['type'], 6)!="svg+xml"){
+            $name = uniqid().'.'.substr($img['type'], 6);
+        }
+        else{
+            $name = uniqid().'.'.substr($img['type'], 6,3);
+        }
         move_uploaded_file($img['tmp_name'], '../../assets/img/'.$name);
         $new_name = 'assets/img/'.$name;
     } else{

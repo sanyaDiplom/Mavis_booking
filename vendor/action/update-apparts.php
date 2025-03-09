@@ -8,30 +8,31 @@ include "../components/core.php";
             $_SESSION['errors']['img'] = "Неверный формат файла!";
         }
         if(substr($img['type'], 6)!="svg+xml"){
-            $name = uniqid().'.'.substr($img['type'], 6);
+        $name = uniqid().'.'.substr($img['type'], 6);
         }
         else{
-            $name = uniqid().'.'.substr($img['type'], 6,3);
+        $name = uniqid().'.'.substr($img['type'], 6,3);
         }
         move_uploaded_file($img['tmp_name'], '../../assets/img/'.$name);
         $new_name = 'assets/img/'.$name;
-    }else{
+        var_dump($new_name);
+    } else{
         $_SESSION['errors']['img'] = "Поле Изображение обязательно для заполнения!";
     }
 	if(!isset($_SESSION['errors'])){
-	$stmt = $connect->prepare("INSERT INTO `apparts` SET `project_id`=?, `corpus`=?, 
+	$stmt = $connect->prepare("UPDATE apparts SET `project_id`=?, `corpus`=?, 
     `number`=?, `floor`=?, `type_id`=?, `img`=?, `price`=?, `status_id`=?, `section`=?, 
-    `square_1`=?, `square_2`=?, `ceiling_height`=?, `finishing`=?");
-	$stmt->bind_param("sssssssssssss",$_POST["project"],$_POST["corpus"],$_POST["number"],
+    `square_1`=?, `square_2`=?, `ceiling_height`=?, `finishing`=? WHERE `id`=?");
+	$stmt->bind_param("ssssssssssssss",$_POST["project"],$_POST["corpus"],$_POST["number"],
     $_POST["floor"],$_POST["type"],$new_name,$_POST["price"],$_POST["status"],
-    $_POST["section"],$_POST["square_1"],$_POST["square_2"],$_POST["ceiling_height"],$_POST["finishing"]);
+    $_POST["section"],$_POST["square_1"],$_POST["square_2"],$_POST["ceiling_height"],$_POST["finishing"],$_POST["id"]);
 	$stmt->execute();
 
-	$_SESSION['massege']['project'] = "Данные успешно добавлены!";
+	$_SESSION['massege']['project'] = "Данные успешно изменены!";
     
-	header("Location:../../apparts-admin.php");
-	}
-	else{
-        header("Location: ../../apparts-admin.php");  
-    }
+	    header("Location:../../apparts-admin.php");
+	 }
+	 else{
+        header("Location: ../../apparts-project.php");  
+     }
     ?>

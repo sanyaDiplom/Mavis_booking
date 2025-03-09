@@ -34,6 +34,10 @@
                         <?php }
                         unset($_SESSION['errors']);
                         }?>
+                        <input type="hidden" name='id'
+                        <?php 
+                            if(isset($_SESSION['apparts'])){?>
+                                value=<?php echo $_SESSION['apparts']['id'];}?>>
                         <?php  $result = $connect->query("SELECT * FROM `projects`");?>
                         <select class="reg_select"  name="project"  id="project" required>
                         <option  value="">-- Выберите проект --</option>
