@@ -7,9 +7,8 @@
     <div class="app_row">
     <!--Карточка выбранной квартиры -->
     <?php $id = $_GET['id'];
-    $result = $connect->query("SELECT *, 
-    (SELECT `name` FROM `projects` WHERE `id`=`project_id`) as `project`,
-    (SELECT `name` FROM `type_apparts` WHERE `id`=`type_id`) as `type`  FROM `apparts` WHERE `id`=$id");
+    $result = $connect->query("SELECT *, (SELECT `name` FROM `projects` WHERE `id`=`project_id`) as `project`,
+    (SELECT `name` FROM `type_apparts` WHERE `id`=`type_id`) as `type` FROM `apparts` WHERE `id`=$id");
     if(!$result){
     return die ("Ошибка получения данных: ". $connect->error);
     }?>
@@ -28,7 +27,19 @@
                             <div class="card_text">Высота потолка:<?php echo $row['ceiling_height']."м"?></div>
                             <div class="card_text">Отделка:<?php echo $row['finishing']?></div>
                             <?php if(isset($_SESSION['users'])){?>
-                            <a class = 'card_link' href = 'apparts.php?id=<?php echo $row['id']?>'>
+                            <a class = 'card_link' href = 'vendor/action/booking.php?id=<?php echo $row['id']?>'>
+                            <?php if(isset($_SESSION['massege'])){
+                                foreach($_SESSION['massege'] as $key=> $value){ ?>
+                                <p class="reg_error"> <?php echo $value; ?></p>    
+                                <?php }
+                                    unset($_SESSION['massege']);
+                                }?>
+                            <?php if(isset($_SESSION['errors'])){
+                            foreach($_SESSION['errors'] as $key=> $value){ ?>
+                            <p class="reg_error"> <?php echo $value; ?></p>    
+                            <?php }
+                            unset($_SESSION['errors']);
+                            }?>
                             <div class = 'card_button'>
                                 Забронировать квартиру
                             </div>
