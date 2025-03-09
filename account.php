@@ -91,6 +91,7 @@
                             if(isset($_SESSION['account'])){?>
                                 value=<?php echo $_SESSION['account']['tel'];}?>
                     />
+                    <a class="card_link" href="vendor/action/word.php"><div class="reg_button">Скачать данные пользователя</div></a>
                         <button class="reg_button" name="reg">Изменить</button>
                     </form>
                 </div>
