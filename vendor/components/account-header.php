@@ -27,7 +27,7 @@
                 <label for="burger-checkbox" class="burger"></label>
                     <ul class="menu">
                         <li class="menu_item"><a href="./account.php" class = 'menu_link'>Личные данные</a></li>
-                        <li class="menu_item"><a href="./favorits.php" class = 'menu_link'>Избранное</a></li>
+                        <li class="menu_item"><a href="./password.php" class = 'menu_link'>Поменять пароль</a></li>
                         <li class="menu_item"><a href="./my-booking.php" class = 'menu_link'>Мои бронирования</a></li>
                         <li class="menu_item"><a href="./feedback.php" class = 'menu_link'>Обратная связь</a></li>
                         <li class="menu_item"><a href="./feedback-form.php" class = 'menu_link'>Написать сообщение</a></li>

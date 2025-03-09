@@ -91,20 +91,6 @@
                             if(isset($_SESSION['account'])){?>
                                 value=<?php echo $_SESSION['account']['tel'];}?>
                     />
-                    <?php unset($_SESSION['account']); ?>
-                    <input class="reg_input"
-                        type="password"
-                        placeholder="Пароль (не менее 8 знаков)"
-                        name="password"
-                        pattern=".{8,}"
-                        required
-                    />
-                    <input class="reg_input"
-                        type="password"
-                        placeholder="Повтор пароля"
-                        name="password_repeat"
-                        required
-                    />
                         <button class="reg_button" name="reg">Изменить</button>
                     </form>
                 </div>

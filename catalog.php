@@ -8,7 +8,7 @@
             <div class = 'container'>
                 <a name = 'project'></a>
             <div class = 'cards_ext'>
-                <h1 class = 'cards_title'>«МАВИС» — 18 лет строим точно в срок!</h1>
+                <h1 class = 'cards_title'>Квартиры доступные к бронированию</h1>
             </div>
             <?php $result = $connect->query("SELECT *, 
             (SELECT `name` FROM `projects` WHERE `id`=`project_id`) as `project`,
@@ -20,11 +20,11 @@
                 <div class = 'cards_row'>
                 <?php while($row = $result->fetch_assoc()){?>
                     <div class = 'card'>
-                        <a href="product.php?id=<?php echo $row['id']?>"><img class = 'card_img' src="<?php echo $row['img'] ?>"></a>
+                        <a href="apparts.php?id=<?php echo $row['id']?>"><img class = 'card_img' src="<?php echo $row['img'] ?>"></a>
                         <div class = 'card_body'>
                             <h3 class = 'card_title'><?php echo $row['project'] ?></h3>
                             <div class = 'card_text'><?php echo $row['type'] . " ". $row['price']. "₽" ?></div>
-                            <a class = 'card_link' href = 'product.php?id=<?php echo $row['id']?>'>
+                            <a class = 'card_link' href = 'apparts.php?id=<?php echo $row['id']?>'>
                             <div class = 'card_button'>
                                 Подробнее
                             </div>
