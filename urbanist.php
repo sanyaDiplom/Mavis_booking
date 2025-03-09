@@ -13,7 +13,7 @@
                      <h1 class="banner_title">ЖК «Урбанист»</h1>
                     <div class="banner_description">
                         <div class="banner_menu"><a href="#advantages" class = 'banner_link'>О проекте</a></div>
-                        <div class="banner_menu"><a href = './catalog.php' class = 'banner_link'>Забронировать квартиру</a></div>
+                        <div class="banner_menu"><a href = './catalog.php?from=3' class = 'banner_link'>Забронировать квартиру</a></div>
                     </div>
                 </div>
             </div>

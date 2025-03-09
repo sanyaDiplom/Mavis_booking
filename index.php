@@ -13,7 +13,7 @@
                     <h1 class="banner_title">Наши проекты</h1>
                     <div class="banner_description">
                         <div class="banner_menu"><a href="#project" class = 'banner_link'>Проекты</a></div>
-                        <div class="banner_menu"><a href = 'catalog.php' class = 'banner_link'>Выбрать квартиру</a></div>
+                        <div class="banner_menu"><a href = 'catalog.php?from=0' class = 'banner_link'>Выбрать квартиру</a></div>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Авиатор</h3>
                             <div class = 'card_text'>1265 квартир. Сдача в 2027 году.</div>
-                            <a class = 'card_link' href = 'catalog.php'>
+                            <a class = 'card_link' href = 'catalog.php?from=0'>
                             <div class = 'card_button'>
                                 Выбрать квартиру
                             </div>
@@ -45,7 +45,7 @@
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Фотограф</h3>
                             <div class = 'card_text'>628 квартир. Сдача в 2025 году.</div>
-                            <a class = 'card_link' href = 'catalog.php'>
+                            <a class = 'card_link' href = 'catalog.php?from=0'>
                             <div class = 'card_button'>
                                 Выбрать квартиру
                             </div>
@@ -57,7 +57,7 @@
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Урбанист</h3>
                             <div class = 'card_text'>628 квартир. Сдача в 2025 году.</div>
-                            <a class = 'card_link' href = 'catalog.php'>
+                            <a class = 'card_link' href = 'catalog.php?from=0'>
                             <div class = 'card_button'>
                                 Выбрать квартиру
                             </div>
@@ -69,7 +69,7 @@
                         <div class = 'card_body'>
                             <h3 class = 'card_title'>Графика</h3>
                             <div class = 'card_text'>405 квартир. Сдача с 2026 году.</div>
-                            <a class = 'card_link' href = 'catalog.php'>
+                            <a class = 'card_link' href = 'catalog.php?from=0'>
                             <div class = 'card_button'>
                                 Выбрать квартиру
                             </div>

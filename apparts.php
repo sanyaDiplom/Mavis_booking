@@ -4,6 +4,24 @@
 ?>
     <main class="main">
     <div class = 'container'>
+            <ul class="breadcrumb">
+                <li><a href="index.php">Главная</a></li>
+                <?php if($_GET['from']==1){?>
+                    <li><a href="aviator.php">Авиатор</a></li>
+                <?php } ?>
+                <?php if($_GET['from']==2){?>
+                    <li><a href="photo.php">Фотограф</a></li>
+                <?php } ?>
+                <?php if($_GET['from']==3){?>
+                    <li><a href="urbanist.php">Урбанист</a></li>
+                <?php } ?>
+                <?php if($_GET['from']==4){?>
+                    <li><a href="grafica.php">Графика</a></li>
+                <?php } ?>
+                <li><a href="catalog.php">Выбрать квартиру</a></li>
+                <li>Забронировать</li>
+            </ul>
+
     <div class="app_row">
     <!--Карточка выбранной квартиры -->
     <?php $id = $_GET['id'];
