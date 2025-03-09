@@ -8,7 +8,30 @@
     if(!isset($_SESSION['users'])){
         header("Location:../sigin.php");
     }
+    //выводим на страницу сообщения пользователя;
+    $id = $_SESSION['users']['id'];
     ?>
+    <div class="container">
+    <h2 class="cards_title" id="reg" name="reg">Ваши сообщения</h2>
+    <div class="project_row">
+    <?php $result = $connect->query("SELECT * FROM `feedback` WHERE `user_id`=$id");
+    if(!$result){
+        return die ("Ошибка получения данных: ". $connect->error);
+    }
+    while($row = $result->fetch_assoc()){?>
+        <div class="projects">
+        <div class="project_admin">
+        <?php echo 'Дата обращения:'. $row['time_feedback'] ?>
+        <div class="project_admin">
+        <?php echo 'Ваше сообщение:'. $row['feedback'] ?></div>
+        <?php if($row['status_id']==2){?>
+            <div class="project_admin">
+            <?php echo 'Дата ответа:'. $row['time_anser'] ?>
+            <div class="project_admin">
+            <?php echo 'Ответ менеджера:'. $row['meneger_answer'] ?></div>
+<?php } ?></div></div>
+    <?php } ?>
+
 </main>
 <!--Добавляем подвал-->
 <?php
