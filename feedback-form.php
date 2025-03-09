@@ -23,7 +23,7 @@
                         <textarea class="textarea_feedback" 
                         name="new_feedback" 
                         id="new_feedback"
-                        placeholder = "Это форма для создания нового обращения. Если вы хотите продолжить диалог в уже созданном ранее обращении, то перейдите на страницу Обратная связь"
+                        placeholder = "Это форма для создания нового обращения. "
                         required></textarea>    
                         
                         <button class="reg_button" name="reg">Отправить</button>

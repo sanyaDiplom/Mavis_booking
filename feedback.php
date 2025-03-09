@@ -19,19 +19,19 @@
         return die ("Ошибка получения данных: ". $connect->error);
     }
     while($row = $result->fetch_assoc()){?>
-        <div class="projects">
-        <div class="project_admin">
-        <?php echo 'Дата обращения:'. $row['time_feedback'] ?>
-        <div class="project_admin">
-        <?php echo 'Ваше сообщение:'. $row['feedback'] ?></div>
+        <div class="feed">
+        <div class="feed_admin">
+        <?php echo 'Дата обращения:'. $row['time_feedback'] ?></div>
+        <div class="feed_admin">
+        <?php echo 'Сообщение пользователя:'. $row['feedback'] ?></div>
         <?php if($row['status_id']==2){?>
-            <div class="project_admin">
-            <?php echo 'Дата ответа:'. $row['time_anser'] ?>
-            <div class="project_admin">
-            <?php echo 'Ответ менеджера:'. $row['meneger_answer'] ?></div>
-<?php } ?></div></div>
+            <div class="feed_admin">
+            <?php echo 'Дата ответа:'. $row['time_anser'] ?></div>
+            <div class="feed_admin">
+            <?php echo 'Ответ менеджера:'. $row['meneger_answer'] ?></div><?php } ?>
+</div></div>
     <?php } ?>
-
+</div>
 </main>
 <!--Добавляем подвал-->
 <?php
