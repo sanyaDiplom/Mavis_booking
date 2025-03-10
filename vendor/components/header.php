@@ -40,9 +40,9 @@
                             if($_SESSION['users']['status']=='0') {?>
                         <li class="menu_item"><a href="./account.php" class = 'menu_link'>Личный кабинет</a></li>
                         <?php } else if($_SESSION['users']['status']=='2'){ ?>
-                        <li class="menu_item"><a href="./admin-panel.php" class = 'menu_link'>Панель администратора</a></li>
+                        <li class="menu_item"><a href="./users-admin.php" class = 'menu_link'>Панель администратора</a></li>
                         <?php }else if($_SESSION['users']['status']=='1'){ ?>
-                            <li class="menu_item"><a href="./admin-panel.php" class = 'menu_link'>Кабинет менеджера</a></li>
+                            <li class="menu_item"><a href="./admin-account.php" class = 'menu_link'>Кабинет менеджера</a></li>
                         <?php }} ?>
                         <li class="menu_item"><a href="./contacts.php" class = 'menu_link'>Контакты</a></li>
                         <?php if(!isset($_SESSION['users'])){?>
