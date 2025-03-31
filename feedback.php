@@ -29,9 +29,9 @@
             <?php echo 'Дата ответа:'. $row['time_anser'] ?></div>
             <div class="feed_admin">
             <?php echo 'Ответ менеджера:'. $row['meneger_answer'] ?></div><?php } ?>
-</div></div>
-    <?php } ?>
 </div>
+    <?php } ?>
+    </div></div>
 </main>
 <!--Добавляем подвал-->
 <?php

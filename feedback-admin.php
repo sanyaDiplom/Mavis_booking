@@ -46,9 +46,9 @@
             <button class="card_button">Ответить</button>
             </form>
 <?php } ?>
-</div></div>
-    <?php } ?>
 </div>
+    <?php } ?>
+</div></div>
 </main>
 <!--Добавляем подвал-->
 <?php
