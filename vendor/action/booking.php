@@ -14,11 +14,12 @@
     }
     //Добавляем запись в таблицу booking и меняем статус в таблице apparts;
     if(!isset($_SESSION['errors'])){
-        $stmt = $connect->prepare("INSERT INTO `booking` SET `user_id`=?, `apparts_id`=?");
-	    $stmt->bind_param("ss",$user_id,$id);
+        $status='2';
+        $stmt = $connect->prepare("INSERT INTO `booking` SET `user_id`=?, `apparts_id`=?, `status_id`=?");
+	    $stmt->bind_param("sss",$user_id,$id,$status);
 	    $stmt->execute();
         $stmt->close();
-        $status='2';
+        
         $stmt = $connect->prepare("UPDATE `apparts` SET `status_id`=? WHERE `id`=?");
 	    $stmt->bind_param("ss",$status,$id);
 	    $stmt->execute();

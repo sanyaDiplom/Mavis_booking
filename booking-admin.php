@@ -10,9 +10,15 @@
     if(!isset($_SESSION['users'])||$_SESSION['users']['status']==0){
         header("Location:../sigin.php");
     }
-    //Выводим забронированные квартиры все;
+    //Выводим забронированные квартиры все, что со статусом забронирован пользователем и что взяты в работу этим менеджером (для админа выводим все бронирования);
     $user_id = $_SESSION['users']['id'];
-    $result1 = $connect->query("SELECT *, (SELECT CONCAT_WS(' ',`surname`,`name`, `patronymic`) FROM `users` WHERE `id`=`user_id`) as `user` FROM `booking`");
+    if($_SESSION['users']['status']==2){
+    $result1 = $connect->query("SELECT *, (SELECT CONCAT_WS(' ',`surname`,`name`, `patronymic`) 
+    FROM `users` WHERE `id`=`user_id`) as `user` FROM `booking`");}
+    else {
+    $result1 = $connect->query("SELECT *, (SELECT CONCAT_WS(' ',`surname`,`name`, `patronymic`) 
+    FROM `users` WHERE `id`=`user_id`) as `user` FROM `booking` WHERE `status_id`='2' OR `meneger_id`='$user_id'"); 
+    }
     if(!$result1){
     return die ("Ошибка получения данных: ". $connect->error);
     }
@@ -46,11 +52,18 @@
                             <form action="vendor/action/update-booking.php" method="get">
                             <input type="hidden" name='id' value=<?php echo $row1['id'] ?>>
                             <input type="hidden" name='app_id' value=<?php echo $app_id ?>>
+                            <input type="hidden" name='status_id' value='4'>
+                            <button class="card_button">В работу</button>
+                            </form>
+                            <form action="vendor/action/update-booking.php" method="get">
+                            <input type="hidden" name='id' value=<?php echo $row1['id'] ?>>
+                            <input type="hidden" name='app_id' value=<?php echo $app_id ?>>
+                            <input type="hidden" name='status_id' value='3'>
                             <button class="card_button">Подтвердить бронь</button>
                             </form>
                             <form action="vendor/action/delete-booking.php" method="get">
                             <input type="hidden" name='id' value=<?php echo $row1['id'] ?>>
-                            <input type="hidden" name='app_id' value=<?php echo $app_id ?>>
+                            <input type="hidden" name='status_id' value=<?php echo $app_id ?>>
                             <button class="card_button">Отменить бронь</button>
                             </form>
                     <?php    } ?>
@@ -61,7 +74,6 @@
     <?php } ?>
 </div>
 </div>
-?>
 </div>
 </div>
 </main>
